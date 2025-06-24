@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For, useContext } from 'solid-js';
+import { createEffect, For, useContext } from 'solid-js';
 import { Button } from '../../../components/Button/Button';
 import Field from '../../../components/Field';
 import { StoreContext } from '../../../lib/store';
@@ -9,7 +9,6 @@ export interface Props {
 }
 export function ScenarioConfig(props: Props) {
     const { store, actions } = useContext(StoreContext)!;
-    const [isEditing, setIsEditing] = createSignal(false);
     const scenario = store.scenarios[props.scenarioId];
 
     createEffect(() => {

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import type { JSX } from 'solid-js/jsx-runtime';
 import classes from './Button.module.css';
 type ButtonType = 'primary' | 'secondary' | 'danger';
 
