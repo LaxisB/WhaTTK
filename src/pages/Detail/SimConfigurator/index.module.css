@@ -1,0 +1,28 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+    grid-auto-flow: dense;
+
+    p {
+        display: flex;
+        margin: 0.5em 0;
+        span {
+            margin-right: 0.5em;
+        }
+    }
+}
+
+p {
+    display: inline-block;
+    margin: 1em;
+}
+label {
+    margin-right: 1em;
+}
+
+.actions {
+    margin-top: 1em;
+    button {
+        margin-right: 0.5em;
+    }
+}

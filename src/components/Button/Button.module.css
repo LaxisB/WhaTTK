@@ -1,0 +1,27 @@
+.button {
+    cursor: pointer;
+    border: none;
+    border: 1px solid color-mix(in srgb, var(--color8), var(--background) 20%);
+    border-radius: var(--component-border-radius);
+    background-color: var(--color8);
+    padding: 0.5rem 1em;
+    color: var(--foreground);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.primary {
+    border-color: color-mix(in srgb, var(--color4), var(--background) 20%);
+    background-color: var(--color4);
+}
+.secondary {
+    border-color: color-mix(in srgb, var(--color7), var(--background) 20%);
+    background-color: var(--color7);
+    color: var(--color0);
+}
+
+.outline {
+    background: none;
+    color: currentColor;
+}
