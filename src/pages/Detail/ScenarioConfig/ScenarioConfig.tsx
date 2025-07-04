@@ -36,9 +36,7 @@ export function ScenarioConfig(props: Props) {
             value={scenario.weapon.name}
             onChange={(e) =>
               actions.updateScenario(props.scenarioId, (s) => {
-                const weapon = store.game!.weapons.find(
-                  (w) => w.name === e.target.value,
-                );
+                const weapon = store.game!.weapons.find((w) => w.name === e.target.value);
                 if (!weapon) {
                   throw new Error(`Weapon ${e.target.value} not found.`);
                 }
@@ -48,10 +46,7 @@ export function ScenarioConfig(props: Props) {
           >
             <For each={store.game?.weapons || []}>
               {(weapon) => (
-                <option
-                  selected={scenario.weapon.name === weapon.name}
-                  value={weapon.name}
-                >
+                <option selected={scenario.weapon.name === weapon.name} value={weapon.name}>
                   {weapon.name}
                 </option>
               )}
@@ -64,9 +59,7 @@ export function ScenarioConfig(props: Props) {
             value={scenario.target.name}
             onChange={(e) =>
               actions.updateScenario(props.scenarioId, (s) => {
-                const target = store.game!.targetTypes.find(
-                  (t) => t.name === e.target.value,
-                );
+                const target = store.game!.targetTypes.find((t) => t.name === e.target.value);
                 if (!target) {
                   throw new Error(`Target type ${e.target.value} not found.`);
                 }
@@ -76,10 +69,7 @@ export function ScenarioConfig(props: Props) {
           >
             <For each={store.game?.targetTypes || []}>
               {(target) => (
-                <option
-                  selected={scenario.target.name === target.name}
-                  value={target.name}
-                >
+                <option selected={scenario.target.name === target.name} value={target.name}>
                   {target.name}
                 </option>
               )}
@@ -117,11 +107,12 @@ export function ScenarioConfig(props: Props) {
         <Field>
           <Button
             kind="secondary"
+            ghost
             onClick={() => {
               actions.deleteScenario(props.scenarioId);
             }}
           >
-            Delete Scenario
+            Delete
           </Button>
         </Field>
       </div>

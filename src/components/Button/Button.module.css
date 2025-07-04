@@ -1,27 +1,40 @@
 .button {
-    cursor: pointer;
-    border: none;
-    border: 1px solid color-mix(in srgb, var(--color8), var(--background) 20%);
-    border-radius: var(--component-border-radius);
-    background-color: var(--color8);
-    padding: 0.5rem 1em;
-    color: var(--foreground);
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
+  --color: var(--color8);
+  cursor: pointer;
+  border: none;
+  border: 1px solid color-mix(in srgb, var(--color), var(--background) 40%);
+  border-radius: var(--component-border-radius);
+  background-color: var(--color);
+  padding: 0.5rem 1em;
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
 }
 
 .primary {
-    border-color: color-mix(in srgb, var(--color4), var(--background) 20%);
-    background-color: var(--color4);
+  --color: var(--color4);
+  color: var(--background);
 }
 .secondary {
-    border-color: color-mix(in srgb, var(--color7), var(--background) 20%);
-    background-color: var(--color7);
-    color: var(--color0);
+  --color: var(--color7);
+  color: var(--background);
+}
+.warning {
+  --color: var(--color3);
+  color: var(--background);
+}
+.danger {
+  --color: var(--color1);
 }
 
 .outline {
-    background: none;
-    color: currentColor;
+  background: none;
+  color: currentColor;
+}
+
+.ghost {
+  border: none;
+  background: none;
+  color: var(--color);
 }
