@@ -1,0 +1,12 @@
+[tools]
+bun = "latest"
+
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
+
+[hooks]
+postinstall = "bun i"
+
+[tasks.build]
+description = "Build the Site for GH Pages"
+run = "bun run build"
